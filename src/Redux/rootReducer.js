@@ -1,6 +1,5 @@
-import { useReducer } from "react";
 import {combineReducers} from "redux";
-import userReducer from "./user/Reducer/UserReducer";
+import userReducer from "./user/Reducer/userReducer";
 
 var rootReducer = combineReducers({
     currentUser : userReducer
