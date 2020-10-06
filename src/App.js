@@ -8,12 +8,22 @@ import Shop from './Pages/Shop/Shop';
 import Product from './Pages/Product/Product';
 import Checkout from './Pages/Checkout/Checkout';
 import Profile from './Pages/Profile/Profile';
+import Navbar from './Components/Navbar/Navbar';
 
 function App() {
   return (
    
   <div>
+    
       <Switch>
+        <div className="app-container">
+      
+      <div className="navbar-view"> 
+      <Navbar/>
+      </div>
+     
+     
+      <div className="app-view">
       <Route path="/" exact  component={Home} />
       <Route path="/Auth" component={Auth} />
       <Route path="/Shop" exact component={Shop} />
@@ -21,8 +31,8 @@ function App() {
       <Route path="/Shop/Category/:categoryName/product/:productId" component={Product} />
       <Route path="/checkout" component={Checkout}/>
       <Route path="/profile" component={Profile}/>
-      
-      
+      </div>
+      </div>
    </Switch>
   </div>
   );

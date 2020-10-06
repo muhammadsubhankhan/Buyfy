@@ -1,9 +1,17 @@
-*{
-    padding: 0%;
-    margin: 0%;
-    border: 0;
+.navbar-container{
+
+    width: 100vw;
+    height: var(--nav-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: lightgrey;
+    display: grid;
+    grid-template-columns: 50vw  repeat(3 , 1fr);
+    
 }
-html{
-    font-size: 52.5%;
-    box-sizing: border-box;
+.logo {
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
 }

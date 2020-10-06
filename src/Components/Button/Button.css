@@ -1,0 +1,13 @@
+.button-container{
+    outline: none;
+    background: grey;
+    padding: 1.4rem 1.2rem;
+    margin: 0rem 1rem;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+
+}
+.button-container:active {
+
+    transform: scale(0.9);
+}
