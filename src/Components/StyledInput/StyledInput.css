@@ -27,6 +27,8 @@
     transform: translateY(-50%);
         color: #a8a8a8;
     transition: all 200ms ease-in-out;
+    pointer-events: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .fousedLabel {
