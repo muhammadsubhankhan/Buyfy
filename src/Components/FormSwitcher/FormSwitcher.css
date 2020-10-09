@@ -1,0 +1,25 @@
+.form-switcher-container {
+    width: 100%;
+    height: 100%;
+    /* background:tomato; */
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    align-items: center;
+    
+}
+
+.switcher-signin {
+    /* background: yellow; */
+}
+.switcher-signup {
+    /* background: greenyellow; */
+    justify-self: end;
+}
+.switcher-underline{
+    background: black;
+    height: 0.1rem;
+    width: 100%;
+    transform-origin: center;
+    transform: scaleX(0.9);
+    
+}

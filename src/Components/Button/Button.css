@@ -1,7 +1,7 @@
 .button-container{
     outline: none;
-    background: grey;
-    padding: 1.4rem 1.2rem;
+    /* background: black; */
+    padding: 0.8rem 1rem;
     margin: 0rem 1rem;
     cursor: pointer;
     transition: all 100ms ease-in-out;

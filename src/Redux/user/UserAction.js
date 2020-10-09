@@ -1,5 +1,4 @@
 import { SET_CURRENT_USER, REMOVE_USER } from "./UserConstant";
-// import { auth, serverTimeStamp,  firestore, googleProvider } from "../../Firebase/firebase";
 import { auth, serverTimeStamp,  firestore, googleProvider } from "./../../Firebase/Firebase";
 export var  setCurrentUser = (userObj) => ({
     type : SET_CURRENT_USER,
@@ -12,23 +11,25 @@ export var  setCurrentUser = (userObj) => ({
 export var signup  = (userObj, navigate ) => {
     return async (dispatch) => {
         try{
-            var {fullname , email , password} = userObj;
+            var {fullName , email , password} = userObj;
                 //create user with firebase awth
             var createdUser = await auth.createUserWithEmailAndPassword(email,password)
 
                             // saave user in database
                             var userObjForFirestore  = {
-                            fullname ,
+                            fullName ,
                             email , 
                             createdAt : serverTimeStamp()
                         };
-                             // console.log(userObjForFirestore)
+                            //  console.log(userObjForFirestore)
                         
-                        await firestore.collection("users").doc(createdUser.user.uid).set(userObjForFirestore)
+                        await firestore.collection("users")
+                        .doc(createdUser.user.uid)
+                        .set(userObjForFirestore)
 
                 // update user auth profile
          await  createdUser.user.updateProfile({
-                displayName:fullname
+                displayName:fullName
     
                     })
 
@@ -51,8 +52,13 @@ export var signin = (userObj) => {
 
         try {
             var {email , password } = userObj;
-            await auth.signInWithEmailAndPassword(email , password); 
-            
+            var {user } = await auth.signInWithEmailAndPassword(email , password); 
+            var {displayName , email , uid} = user
+            var userObjForState = {
+                fullName:displayName , 
+                email : email 
+                }
+                dispatch(setCurrentUser(userObjForState)); 
         }
 
          catch (error) {
@@ -83,7 +89,7 @@ export var googleLogin = () => {
         if(isNewUser){
             // send user data to firestore
         var userObj = {
-            fullname : displayName ,
+            fullName : displayName ,
             email , 
             createdAt: serverTimeStamp()
         }
