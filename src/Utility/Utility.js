@@ -23,3 +23,31 @@ export var fontWeightParser = (fontWeightString) =>{
     }
     return value;
 }
+
+export var productCategorization = (products) => {
+    var categorizedProducts = [];
+    var exist = null
+    products.forEach((product) => {
+        exist =categorizedProducts.some((cp) => cp.category === product.category)
+        if(!exist) {
+            categorizedProducts.push({
+                category: product.category , 
+                products : [product] , 
+
+            });
+        } else { 
+            categorizedProducts.map((cp) => {
+                if(cp.category === product.category) {
+                    return  {
+                        ...cp  , 
+                        products : cp.products.push(product)
+                    }
+                }
+                else {
+                    return cp;
+                }
+            }) 
+        }
+    });
+    return categorizedProducts;
+}

@@ -1,0 +1,9 @@
+.category-tap-container{
+    width: 100%;
+    height: 20rem;
+    background:darkorchid;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr); /* TODO : 4 column */
+    justify-items: center;
+
+}
