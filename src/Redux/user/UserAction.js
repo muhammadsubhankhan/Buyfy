@@ -52,13 +52,15 @@ export var signin = (userObj) => {
 
         try {
             var {email , password } = userObj;
-            var {user } = await auth.signInWithEmailAndPassword(email , password); 
-            var {displayName , email , uid} = user
-            var userObjForState = {
-                fullName:displayName , 
-                email : email 
-                }
-                dispatch(setCurrentUser(userObjForState)); 
+            await auth.signInWithEmailAndPassword(email , password); 
+            // var {displayName , email , uid} = user
+            // var userObjForState = {
+            //     fullName: displayName , 
+            //     email : email ,
+            //     uid : uid, 
+            //     }
+                // console.log(userObjForState)
+                // dispatch(setCurrentUser(userObjForState)); 
         }
 
          catch (error) {

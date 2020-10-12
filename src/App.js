@@ -25,7 +25,7 @@ function App(props) {
         if(userSnap.exists) {
           var userData = userSnap.data();
           var userObj = {
-            fullname: userData.fullname,
+            fullName: userData.fullName,
             uid,
             email : userData.email
           }
