@@ -1,6 +1,7 @@
 export var products = [
 
     {
+        id : "c1" ,
         name: "cap1" , 
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry." , 
         imageUrl : `./cap1.jpg` ,
@@ -9,6 +10,7 @@ export var products = [
         cost : 500
     } , 
     {
+        id : "c2" ,
         name: "cap2" , 
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry." , 
         imageUrl : `./cap2.jpg` ,
@@ -17,6 +19,7 @@ export var products = [
         cost : 232
     } , 
     {
+        id : "c3" ,
         name: "cap3" , 
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry." , 
         imageUrl : `./cap3  .jpg` ,
@@ -25,6 +28,7 @@ export var products = [
         cost : 450
     } ,
     {
+        id : "s1" ,
         name: "shirt" , 
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry." , 
         imageUrl : `./shirt.jpg` ,
@@ -33,6 +37,7 @@ export var products = [
         cost : 1000
     } , 
     {
+        id : "s2" ,
         name: "sweat shirt" , 
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry." , 
         imageUrl : `./sweatshirt.jpg` ,
@@ -41,6 +46,7 @@ export var products = [
         cost : 500
     } ,
     {
+        id : "s3" ,
         name: "polo t shirt" , 
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry." , 
         imageUrl : `./poloshirt.jpg` ,
@@ -49,6 +55,7 @@ export var products = [
         cost : 500
     } ,
     {
+        id : "p1" ,
         name: "jeans" , 
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry." , 
         imageUrl : `./jeans.jpg` ,
@@ -57,6 +64,7 @@ export var products = [
         cost : 500
     },
     {
+        id : "p2" ,
         name: "jeans pant" , 
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry." , 
         imageUrl : `./jeanspant.jpg` ,
@@ -65,6 +73,7 @@ export var products = [
         cost : 700
     },
     {
+        id : "p3" ,
         name: "cotton pant" , 
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry." , 
         imageUrl :`./cotton.jpg` ,
@@ -73,6 +82,7 @@ export var products = [
         cost : 700
     }, 
     {
+        id : "w1" ,
         name: "shoes" , 
         description: "Lorem  is simply dummy text of the printing and typesetting industry." , 
         imageUrl : `./shoes.jpg` ,
@@ -81,6 +91,7 @@ export var products = [
         cost : 900
     }, 
     {
+        id : "w2" ,
         name: "joggers" , 
         description: "Lorem  is simply dummy text of the printing and typesetting industry." , 
         imageUrl : `./shoes.jpg` ,
@@ -89,6 +100,7 @@ export var products = [
         cost : 2000
     } , 
     {
+        id : "w3" ,
         name: "shoes" , 
         description: "Lorem  is simply dummy text of the printing and typesetting industry." , 
         imageUrl : `./shoes.jpg`,

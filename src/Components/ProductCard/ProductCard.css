@@ -18,7 +18,7 @@
     background: cornflowerblue;
 }
 .product-card-info {
-    background: crimson;
+    background: lightslategray;
     display: grid;
     grid-template-columns: 1fr min-content;
     align-items: center;

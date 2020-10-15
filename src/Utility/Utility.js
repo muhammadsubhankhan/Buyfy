@@ -51,3 +51,24 @@ export var productCategorization = (products) => {
     });
     return categorizedProducts;
 }
+
+ export var addItemToCartHelper = (itemArr , itemToAdd) => {
+     var exist = itemArr.some((item) => item.id === itemToAdd.id)
+     if(exist) {
+        itemArr.map((item) => {
+            if(item.id ===itemToAdd.id) {
+                return{
+                    ...item , 
+                    quantity : item.quantity +1 
+                }
+                
+            }
+            else {
+                return item
+            }
+        })
+     }
+     else {
+         return [...itemArr , {...itemToAdd , quantity : 1}]
+     }
+}

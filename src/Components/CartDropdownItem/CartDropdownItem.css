@@ -1,0 +1,17 @@
+.class-dropdown-item-container{
+    width: 100%;
+    height: 8rem;
+    /* background: slateblue; */
+    display: grid;
+    grid-template-columns: 35fr 65fr ;
+}
+/* 
+.class-dropdown-item-img {
+    background:  darksalmon;    
+} */
+
+.class-dropdown-item-info{
+    align-items: start;
+    background: green;
+    padding: 1rem;
+}

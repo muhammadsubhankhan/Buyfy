@@ -1,15 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState , useEffect } from 'react'
 import { products } from '../../Utility/Data/Data';
 import { productCategorization } from '../../Utility/Utility';
 import "./CategoryContainer.css";
 import CategoryTab from './CategoryTab/CategoryTab';
 const CategoryContainer = () => {
+
     var categorizedProduct = null;
-    useState(() => {
-        categorizedProduct = productCategorization(products);
-        console.log(categorizedProduct)
-    } , []) 
-    console.log(products)
+    var [categorizedProduct, setCategorizedProduct] = useState([]);
+    useEffect(() => {
+        setCategorizedProduct(productCategorization(products))
+        
+        
+    }, [])
+    console.log(categorizedProduct)
+    
+   
    
     return (
         <div className="category-container">

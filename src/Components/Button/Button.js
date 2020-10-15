@@ -3,10 +3,10 @@ import Paragraph from "../Paragraph/Paragraph";
 import "./../Button/Button.css";
 
 const Button = (props) => {
-    var {children , backgroundColor="#4287f5" ,  style , color="black" ,  ...restProps } = props;
+    var {children , fontSize= 12 ,  backgroundColor="#4287f5" ,  style , color="black" ,  ...restProps } = props;
     return(
         <button {...restProps  } style={{...style , background:backgroundColor}} className="button-container">
-            <Paragraph fontColor={color} style={{letterSpacing: " 0.2rem" }} fontSize={12} >{children}</Paragraph>
+            <Paragraph fontColor={color} style={{letterSpacing: " 0.2rem" }} fontSize={fontSize} >{children}</Paragraph>
         </button>
     );
 }
